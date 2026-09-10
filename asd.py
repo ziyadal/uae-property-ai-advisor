@@ -38,7 +38,7 @@ if hasattr(sys.stdout, "reconfigure"):
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
 if openai_api_key:
-    print(f"OpenAI API Key exists and begins {openai_api_key[:8]}")
+    print("OpenAI API key configured")
 else:
     print("OpenAI API Key not set")
 
