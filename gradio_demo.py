@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from html import escape
+import os
 
 import gradio as gr
 
@@ -350,4 +351,7 @@ with gr.Blocks(title="UAE Off-Plan Broker Demo") as demo:
 
 
 if __name__ == "__main__":
-    demo.queue(default_concurrency_limit=8).launch(css=CSS, share=True)
+    demo.queue(default_concurrency_limit=8).launch(
+        css=CSS,
+        share=os.getenv("GRADIO_SHARE", "0") == "1",
+    )
