@@ -1,7 +1,7 @@
 [project]
-name = "cb"
+name = "uae-property-ai-advisor"
 version = "0.1.0"
-description = "Add your description here"
+description = "Grounded, stateful AI recommendations for UAE off-plan property research"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
