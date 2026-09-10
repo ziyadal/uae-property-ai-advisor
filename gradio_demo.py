@@ -264,8 +264,10 @@ async def respond_stream(user_message: str, history: list[dict]):
                 run_broker_agent(clean_user_message, recommendation_result=recommendation_result)
             )
             yield "", updated, cards_html
-    except Exception as exc:
-        updated[-1]["content"] = f"Sorry, I hit an error while retrieving data: {exc}"
+    except Exception:
+        updated[-1]["content"] = (
+            "Sorry, I could not complete that request. Please try again or adjust your criteria."
+        )
         yield "", updated, cards_html
 
 
