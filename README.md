@@ -45,11 +45,10 @@ uv run pytest
 
 ## Run the demo
 
-Requires Python 3.12+ and an OpenAI API key.
+Requires Python 3.12+ and an OpenAI API key. Copy `.env.example` to `.env`, then replace the placeholder key.
 
 ```bash
 uv sync
-# Set OPENAI_API_KEY in your environment or a local .env file
 uv run gradio_demo.py
 ```
 
